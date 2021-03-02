@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/img\3.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.login-box {
+    width: 390px;
+    height: 390px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+
+.diseño input[type="submit"] {
+    border: none;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-style: solid;
+    outline: none;
+    height: 50px;
+    background: #0b74d6;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.diseño input[type="submit"]:hover {
+    cursor: pointer;
+    background: #1c415f;
+    color: #000;
+}

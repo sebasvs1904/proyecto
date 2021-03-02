@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <head>
+<script src="js/oculta.js">
+   function validate(e) {
+    var formulario = document.form;
+
+    for (var i = 0; i < form.childElementCount; i++) {
+        if (form.children[i].type == "checkbox" && form.children[i].checked==false) {
+            alert('debes seleccionar al menos una opción');
+            if (e.preventDefault) {
+                e.preventDefault();
+            } else {
+                e.returnValue = false;
+            } break;
+        } else
+            break;
+    }
+}
+</script>
+    </head>
+    
+    <body>
+        <form action="Control.php" method="POST" id="formulario">
+            <label> Seleciona los sintomas que padece</label><br>
+            <input type="checkbox" name="sintomas[]" value="Tos con o sin mucosidad">Tos con o sin mucosidad
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Dolor en el pecho">Dolor en el pecho
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Cansancio (fatiga)">Cansancio (fatiga)
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Dolor de cabeza leve">Dolor de cabeza leve
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Dolores corporales leves">Dolores corporales leves
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Dolor de garganta">Dolor de garganta
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Goteo de mucosidad en la garganta">Goteo de mucosidad en la garganta
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Lagrimeo">Lagrimeo
+           <br>
+            <input type="checkbox" name="sintomas[]" value="Fiebre">Fiebre
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Dolores corporales">Dolores corporales
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Dolor de cabeza">Dolor de cabeza
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Escalofríos">Escalofríos
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Vómitos">Vómitos
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Diarrea">Diarrea
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Enrojecimiento de la piel">Enrojecimiento de la piel
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Dolor, sensibilidad o sensación de calor cuando se toca la piel afectada">Dolor, sensibilidad o sensación de calor cuando se toca la piel afectada
+            <br>
+            <input type="checkbox" name="sintomas[]" value="Inflamación del área afectada">Inflamación del área afectada
+            <input type="hidden"  name="txtOpe">
+            <br>
+        <input type="submit" value="Omitir" onclick="txtOpe.value='1'" name="submit" onsubmit="validate(event, this);">
+            <input type="submit" value="Enviar" name="Enviar" onclick="verificar()" >
+
+
+        </form>
+    </body>
+</html>
